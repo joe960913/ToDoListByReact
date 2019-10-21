@@ -1,7 +1,7 @@
-import React,{useState} from "react";
+import React, { useState } from "react";
 import "./App.less";
-import ToDo from './ToDo'
-import Done from './Done'
+import ToDo from "./ToDo";
+import Done from "./Done";
 let goodSentence = [
   `“To have created love like that out of absolutely nothing — it was a sort of miracle, wasn’t it?”
 – Marianne Wiggins'`,
@@ -25,24 +25,28 @@ let goodSentence = [
 – Haruki Murakami`
 ];
 function App() {
-  const [tab,setTab] = useState('todo')
-  let ChangeTab = (e) =>{
-    e.preventDefault()
-    let val = e.target.value
-    setTab(val)
-  }
-  let rand = Math.floor(Math.random()*goodSentence.length)
-  let stc = goodSentence[rand]
+  const [tab, setTab] = useState("todo");
+  let ChangeTab = e => {
+    e.preventDefault();
+    let val = e.target.value;
+    setTab(val);
+  };
+  let rand = Math.floor(Math.random() * goodSentence.length);
+  let stc = goodSentence[rand];
   return (
     <div id="container">
       <h1 id="header">TODO</h1>
-      <div id ='sentence'><span>{stc}</span></div>
-      {
-        tab === 'todo' ? <ToDo/> : <Done/>
-      }
-      <div style={{display:'flex',justifyContent:'space-around'}}>
-        <button value='todo' onClick={ChangeTab}>todo</button>
-        <button value='done' onClick={ChangeTab}>done</button>
+      <div id="sentence">
+        <span>{stc}</span>
+      </div>
+      {tab === "todo" ? <ToDo /> : <Done />}
+      <div style={{ display: "flex", justifyContent: "space-around" }}>
+        <button value="todo" onClick={ChangeTab}>
+          todo
+        </button>
+        <button value="done" onClick={ChangeTab}>
+          done
+        </button>
       </div>
     </div>
   );
