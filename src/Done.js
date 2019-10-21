@@ -1,10 +1,11 @@
-import React from 'react'
+import React ,{useState}from 'react'
 import {connect} from 'react-redux'
 function mapStateToProps(state){
     return {done:state.done}
 }
 function Done(props) {
     const {done,dispatch} = props
+    const [display,setDisplay] = useState('none')
     return (
         <div>
             <ul>
@@ -14,7 +15,7 @@ function Done(props) {
                     })
                 }
             </ul>
-            <button onClick={()=>{dispatch({type:'CLEAR'})}}>clear</button>
+            <button onClick={()=>{dispatch({type:'CLEAR'})}} style={{display:{display}}}>clear</button>
         </div>
     )
 }

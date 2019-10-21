@@ -8,6 +8,7 @@ let remove = (arr, val) => {
   }
   return res;
 };
+
 export default function todoApp(state = { todos: [], done: [] }, action) {
   switch (action.type) {
     case "ADD":

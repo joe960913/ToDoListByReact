@@ -10,7 +10,8 @@ body {
 }
 
 #root {
-    background: #91989F;
+    //background: linear-gradient(to top, #fbc2eb 0%, #a18cd1 100%);
+    background: url('@{images}/bad.jpg') top/cover no-repeat;
     background-size: cover;
     height: 100%
 }
@@ -20,9 +21,11 @@ body {
     width: 400px;
     margin: 0 auto;
     top: 100px;
-    border: 1px solid whitesmoke;
+    border: 3px solid transparent;
     border-radius: 10px;
-    background: whitesmoke;
+    background: transparent;
+    border-image: linear-gradient(#fbc2eb, #a18cd1) 30 30;
+    //border-image: linear-gradient(rgb(51,79,234), #a18cd1) 30 30;
 
     #header {
         text-align: center;
@@ -31,15 +34,20 @@ body {
         font-size: 300%;
         height: 210px;
         width: 100%;
-        background: url('@{images}/mount.jpg');
-        background-size: cover;
+        background: url('@{images}/earth.jpg') top/cover no-repeat;
         margin: 0;
-        border-radius: 10px;
+        font-family: Poppins, Arial, "Helvetica Neue", sans-serif // border-radius: 10px 10px 0 0
+    }
+    #sentence{
+        text-align: center;
+        padding: 5px;
+        color: white
     }
 
     #input {
         display: flex;
-        justify-content: center
+        justify-content: center;
+        
     }
 
     #context {
@@ -47,29 +55,35 @@ body {
             display: flex;
             justify-content: center;
         }
+
         li {
-            list-style-type: square; 
+            list-style-type: square;
         }
+    }
+    button {
+        display: inline-block;
+        line-height: 40px;
+        padding: 0  15px;
+        margin:10px 0;   
+        font-family: Poppins, Arial, "Helvetica Neue", sans-serif;
+        cursor: pointer;
+        transition: all 0.4s ease;
+        font-size: 18px;
+        border-radius: 5px
+    }
+    input {
+        border-radius: 5px;
+        outline-style: none;
+        border: 0px;
+        padding: 0px;
+        font-size: 16px;
+        margin-top: 10px;
+        margin-bottom: 10px;
+        margin-right: 20px
     }
 }
 
-// button {
-//     display: inline-block;
-//     padding: 10px 8px;
-//     font-size: 12px;
-//     cursor: pointer;
-//     text-align: center;
-//     text-decoration: none;
-//     outline: none;
-//     color: #fff;
-//     background-color: @theme-color;
-//     border: none;
-//     border-radius: 50%;
-//     box-shadow: 2px 2px 1px 1px #999;
 
-//     &:hover {
-//         background-color: @theme-color
-//     }
 
 
 //     &:active {
