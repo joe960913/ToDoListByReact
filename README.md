@@ -17,7 +17,7 @@
 ---
 
 ### These are the front-end technologies I use.
-React , Redux , webpack , Less .
+React , Redux , Hook , webpack , Less .
 
 ---
 
