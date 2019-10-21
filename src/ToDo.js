@@ -1,30 +1,25 @@
 import React, { useState } from "react";
+import { connect } from 'react-redux'
 
-export default function Todo() {
-  const [thing, setThing] = useState([]); //所有的待办事项
+function mapStateToProps(state) {
+    return { todos: state.todos }
+  }
+function ToDo(props) {
   const [add, addThing] = useState(""); //表单输入值
-  //定义了一个方法，从数组中删除指定元素后返回删除后的数组
-  let remove = (arr, val) => {
-    let res = [];
-    for (let i of arr) {
-      if (i !== val) {
-        res.push(i);
-      }
-    }
-    return res;
-  };
+  const {dispatch,todos} = props
   let handleDelete = e => {
     let val = e.target.value;
-    setThing(remove(thing, val));
+    dispatch({type:'DELETE',text:val})
   };
   let handleAdd = e => {
     e.preventDefault();
-    setThing(thing.concat([add]));
+    dispatch({type:'ADD',text:add})
     addThing("");
   };
   let handleChange = e => {
     let val = e.target.value;
     addThing(val);
+    console.log(add)
   };
   return (
     <div>
@@ -33,7 +28,7 @@ export default function Todo() {
         <button value="Submit">add</button>
       </form>
       <ul id="context">
-        {thing.map((item, index) => {
+        {todos.map((item, index) => {
           return (
             <div key={index}>
               <li>
@@ -49,3 +44,5 @@ export default function Todo() {
     </div>
   );
 }
+
+export default connect(mapStateToProps)(ToDo)

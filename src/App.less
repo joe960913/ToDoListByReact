@@ -1,16 +1,20 @@
 @theme-color: #8A6BBE;
 @images: './images';
-html,body{
-             height: 100%;
-             width: 100%;
-             margin: 0;
-             padding: 0;
-        }
-#root{
-    background:#91989F;
-    background-size: cover;
-    height:100%
+
+html,
+body {
+    height: 100%;
+    width: 100%;
+    margin: 0;
+    padding: 0;
 }
+
+#root {
+    background: #91989F;
+    background-size: cover;
+    height: 100%
+}
+
 #container {
     position: relative;
     width: 400px;
@@ -19,6 +23,7 @@ html,body{
     border: 1px solid whitesmoke;
     border-radius: 10px;
     background: whitesmoke;
+
     #header {
         text-align: center;
         color: #FCFAF2;
@@ -37,34 +42,39 @@ html,body{
         justify-content: center
     }
 
-    #context div {
-        display: flex;
-        justify-content: center;
+    #context {
+        div {
+            display: flex;
+            justify-content: center;
+        }
+        li {
+            list-style-type: square; 
+        }
     }
 }
 
-button {
-    display: inline-block;
-    padding: 10px 8px;
-    font-size: 12px;
-    cursor: pointer;
-    text-align: center;
-    text-decoration: none;
-    outline: none;
-    color: #fff;
-    background-color: @theme-color;
-    border: none;
-    border-radius: 50%;
-    box-shadow: 2px 2px 1px 1px #999;
+// button {
+//     display: inline-block;
+//     padding: 10px 8px;
+//     font-size: 12px;
+//     cursor: pointer;
+//     text-align: center;
+//     text-decoration: none;
+//     outline: none;
+//     color: #fff;
+//     background-color: @theme-color;
+//     border: none;
+//     border-radius: 50%;
+//     box-shadow: 2px 2px 1px 1px #999;
 
-    &:hover {
-        background-color: @theme-color
-    }
+//     &:hover {
+//         background-color: @theme-color
+//     }
 
 
-    &:active {
-        background-color: @theme-color;
-        box-shadow: 0 5px #666;
-        transform: translateY(4px);
-    }
-}
+//     &:active {
+//         background-color: @theme-color;
+//         box-shadow: 0 5px #666;
+//         transform: translateY(4px);
+//     }
+// }
