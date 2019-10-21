@@ -23,9 +23,9 @@ React , Redux , webpack , Less .
 
 ### How to run.
 ```
-git clone https://github.com/joe960913/ToDoListByReact.git
+git clone https://github.com/joe960913/todo-list-react-redux.git
 
-cd ToDoListByReact/
+cd todo-list-react-redux/
 
 yarn
 
