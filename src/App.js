@@ -39,7 +39,7 @@ function App() {
             <div key={index}>
               <li type='square'>{item}</li>
               <button value={item} onClick={handleDelete}>
-                delete
+                done  
               </button>
             </div>
           );
