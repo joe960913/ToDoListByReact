@@ -19,7 +19,6 @@ function ToDo(props) {
   let handleChange = e => {
     let val = e.target.value;
     addThing(val);
-    console.log(add)
   };
   return (
     <div>

@@ -1,6 +1,7 @@
 import React from "react";
 import { connect } from "react-redux";
 function mapStateToProps(state) {
+console.log(state)
   return { done: state.done };
 }
 function Done(props) {
@@ -12,15 +13,8 @@ function Done(props) {
           return <li key={index}>{item}</li>;
         })}
       </ul>
-      {done === [] ? (
-        <button
-          onClick={() => {
-            dispatch({ type: "CLEAR" });
-          }}
-          style={{ display: "none" }}
-        >
-          clear
-        </button>
+      {done === Array(0) ? (
+        <div></div>
       ) : (
         <button
           onClick={() => {
