@@ -2,7 +2,7 @@
 
 ---
 
-###This is a preview.
+### This is a preview.
 ![image](./demo.png)
 
 ---
@@ -16,20 +16,20 @@
 
 ---
 
-###These are the front-end technologies I use.
+### These are the front-end technologies I use.
 React , Redux , webpack , Less .
 
 ---
 
-###How to run.
+### How to run.
 ```
-git clone https://github.com/joe960913/ToDoListByReact.git
+git clone https://github.com/joe960913/todo-list-react-redux.git
 
-cd ToDoListByReact/
+cd todo-list-react-redux/
 
 yarn
 
 yarn start
 ```
 ---
-###Thank you for watching & Looking forward to your issues!
+### Thank you for watching & Looking forward to your issues!
